@@ -69,3 +69,7 @@ public class Q1 {
     }
 }
 ```
+
+### Q2
+
+
