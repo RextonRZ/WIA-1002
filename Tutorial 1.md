@@ -71,5 +71,10 @@ public class Q1 {
 ```
 
 ### Q2
-
+```plaintext
+(1) Performs Person's tasks
+(2) Invoke Employee's overloaded constructor
+(3) Performs Employee's tasks 
+(4) Performs Faculty's tasks
+```
 
