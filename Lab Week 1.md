@@ -287,6 +287,29 @@ public class Q2Text3 {
 }
 ```
 
+### Question 2
+#### 2(c)
+```plaintext
+public class Q2Text4 {
+    public static void main(String[] args) {
+        try{
+            Scanner in = new Scanner(new FileInputStream("text4.txt"));
+            int chartotal = 0;
+            while (in.hasNextLine()){
+                String line = in.nextLine();
+                chartotal+=line.length();
+            }
+            in.close();
+            System.out.println("Total number of characters retrieved: "+chartotal);
+        }catch(FileNotFoundException e){
+            System.out.println("File was not found.");
+        }catch(IOException e){
+            System.out.println("Problem with file output.");
+        }
+    }
+}
+```
+
 
 
 
