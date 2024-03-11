@@ -72,6 +72,7 @@ public class Q1 {
 
 ### Q2
 ```plaintext
+Ans:
 (1) Performs Person's tasks
 (2) Invoke Employee's overloaded constructor
 (3) Performs Employee's tasks 
@@ -96,7 +97,7 @@ class Employee extends Person {                                   //Employee, a 
 }
 
 public class Faculty extends Employee {                           //Faculty, a subclass of Employee is created
-     public Faculty() {                                           //empty constructor iscreated 
+     public Faculty() {                                           //empty constructor is created 
          System.out.println("(4) Performs Faculty's tasks");      //print
      }
      public static void main(String[] args) {                     //Main method 
@@ -106,5 +107,35 @@ public class Faculty extends Employee {                           //Faculty, a s
 
 
 So the program will start excecute from Person -> Employee -> Faculty.
+```
+
+
+### Q3
+```plaintext
+Ans: a. AB
+
+Explanation:
+1)
+class B {                                        //a toString method is create in class B and it will return B
+    public String toString() {
+    return "B";
+    }
+}
+
+2)
+class A extends B {                              //A is the subclass of B.
+    public String toString() {                   //When a toString method is created, it overrides the toString method in class B,
+    return "A";                                  //it returns A for the toString method
+    }
+}
+
+3)
+public class C {
+     public static void main(String[] args) {    //In main method,
+         Object[] o = {new A(), new B()};        //array of object is created to store the instances of class A and B
+         System.out.print(o[0]);                 //print out the string representation for the instance of class A and B
+         System.out.print(o[1]);
+     }
+}
 ```
 
