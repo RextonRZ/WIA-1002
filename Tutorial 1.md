@@ -139,3 +139,55 @@ public class C {
 }
 ```
 
+
+### Q3
+```plaintext
+public abstract class Vehicle {
+
+    private double maxSpeed;
+    private double currentSpeed;
+    
+    //a constructor accepting a double used to initialize the maxSpeed instance variable
+    public Vehicle(double maxSpeed){
+        this.maxSpeed = maxSpeed;
+        this.currentSpeed = 0.0;
+    }
+    
+    // Abstract method
+    public abstract void accelerate();
+    
+    //a method getCurrentSpeed that returns the value of currentSpeed
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    //a method getMaxSpeed that returns the value of maxSpeed
+    public double getCurrentSpeed() {
+        return currentSpeed;
+    }
+    
+    //Method to accelerate until speed of vehicle reaching maxSpeed
+    public void pedalToTheMetal() {
+        while (currentSpeed < maxSpeed) {
+            accelerate();
+        }
+    }
+}
+
+
+//Since vehicle is an abstract class, we can't create an instance of Vehicle. IT only serves as a template or blueprint for other classes to inherit from. For example, we can only create instances when we create a subclass of Vehicle (such as "Car") and provide an implementation for the abstract method accelerate.
+Exp:
+public class Car extends Vehicle {
+    // Constructor
+    public Car(double maxSpeed) {
+        super(maxSpeed);
+    }
+
+    // Implementation of the abstract method accelerate
+    @Override
+    public void accelerate() {
+        currentSpeed += 5; // Example implementation
+    }
+}
+```
+
