@@ -191,3 +191,39 @@ public class Car extends Vehicle {
 }
 ```
 
+# Q5
+```plaintext
+interface Account {
+    int deposit(int amount);
+    boolean withdraw(int amount);
+}
+
+public class BankAccount implements Account{
+    int balance;
+    
+    public BankAccount(int balance){
+        this.balance = balance;
+    }
+    
+    // Implementation of deposit method
+    @Override
+    public int deposit(int amount){
+        balance+=amount;
+        return balance;
+    }
+    
+    // Implementation of withdraw method
+    public boolean withdraw(int amount){
+        if(amount<=balance){
+            balance-=amount;
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+```
+
+
+
+
