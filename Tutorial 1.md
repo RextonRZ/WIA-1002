@@ -76,5 +76,35 @@ public class Q1 {
 (2) Invoke Employee's overloaded constructor
 (3) Performs Employee's tasks 
 (4) Performs Faculty's tasks
+
+
+Explanation:
+class Person {                                                    //class Person is created                            
+     public Person() {                                            //empty constructor (no parameter) is created to print (1) Performs Person's tasks
+         System.out.println("(1) Performs Person's tasks");
+     }
+}
+
+class Employee extends Person {                                   //Employee, a subclass of Person is created
+     public Employee() {                                          //empty constructor 
+         this("(2) Invoke Employee's overloaded constructor");    //'this' is used to invoke another constructor in the same class (call Employee(String s) )
+         System.out.println("(3) Performs Employee's tasks ");    //after invoking, print 
+     }
+     public Employee(String s) {
+         System.out.println(s);
+     }
+}
+
+public class Faculty extends Employee {                           //Faculty, a subclass of Employee is created
+     public Faculty() {                                           //empty constructor iscreated 
+         System.out.println("(4) Performs Faculty's tasks");      //print
+     }
+     public static void main(String[] args) {                     //Main method 
+         new Faculty();                                           //Create an instance of Faculty, which triggers the constructor chain
+     }                                                            //causing the constructors of Employee and Person to execute as well. 
+}
+
+
+So the program will start excecute from Person -> Employee -> Faculty.
 ```
 
