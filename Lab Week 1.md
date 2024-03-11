@@ -201,6 +201,30 @@ public class AppendFiles {
 }
 ```
 
+### Question 2
+#### 1.
+```plaintext
+public class Q2Text1 {
+    public static void main(String[] args) {
+        try{
+            Scanner in = new Scanner(new FileInputStream("text1.txt"));
+            int chartotal = 0;
+            while (in.hasNextLine()){
+                String line = in.nextLine();
+                String[] charac = line.split(",");
+                chartotal+=charac.length;
+            }
+            in.close();
+            System.out.println("Total number of characters retrieved: "+chartotal);
+        }catch(FileNotFoundException e){
+            System.out.println("File was not found.");
+        }catch(IOException e){
+            System.out.println("Problem with file output.");
+        }
+    }
+}
+```
+
 
 
 
