@@ -240,7 +240,7 @@ public class Q2Text2 {
                     int numValue = Integer.parseInt(nums);
                     while (numValue != 0) {
                         int digit = numValue % 10;
-                        if (digit >= 1) {
+                        if (digit > 0) {
                             chartotal++;
                         }
                         numValue /= 10;
