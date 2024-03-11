@@ -258,6 +258,35 @@ public class Q2Text2 {
 }
 ```
 
+### Question 2
+#### 2(b)
+```plaintext
+public class Q2Text3 {
+    public static void main(String[] args) {
+        try{
+            Scanner in = new Scanner(new FileInputStream("text3.txt"));
+            int chartotal = 0;
+            while (in.hasNextLine()) {
+                String line = in.nextLine();
+                String[] num = line.split("; ");
+                for (String nums : num) {
+                    String[] numbers = nums.split("\\.");
+                    for (String number : numbers) {
+                        chartotal += number.length();
+                    }
+                }
+            }
+            in.close();
+            System.out.println("Total number of characters retrieved: "+chartotal);
+        }catch(FileNotFoundException e){
+            System.out.println("File was not found.");
+        }catch(IOException e){
+            System.out.println("Problem with file output.");
+        }
+    }
+}
+```
+
 
 
 
