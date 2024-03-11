@@ -85,4 +85,28 @@ public class Q1 {
 }
 ```
 
+#### Part 2:
+```plaintext
+* How you have performed in the class?
+I have performed well in the class.
+
+* Are you happy with your performance?
+I am happy with my performance
+
+* What has learning DS taught you / what did you learn from DS?
+Learning DS taught me to be more patient and analytical.
+
+* Is there any change to your target grade?
+My target grade remains the same, which is A.
+
+* What you did well during the course?
+During the course, I consistently engaged with the material on Spectrum and completed assignments on time.
+
+* What could have been done better during the course?
+I could have dedicated more time to practice problems and past year questions to deepen my understanding of certain topics.
+```
+
+
+
+
 
