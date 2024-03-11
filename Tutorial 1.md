@@ -140,7 +140,7 @@ public class C {
 ```
 
 
-### Q3
+### Q4
 ```plaintext
 public abstract class Vehicle {
 
@@ -191,7 +191,7 @@ public class Car extends Vehicle {
 }
 ```
 
-# Q5
+### Q5
 ```plaintext
 interface Account {
     int deposit(int amount);
