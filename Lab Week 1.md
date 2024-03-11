@@ -106,6 +106,101 @@ During the course, I consistently engaged with the material on Spectrum and comp
 I could have dedicated more time to practice problems and past year questions to deepen my understanding of certain topics.
 ```
 
+#### 3.
+```plaintext
+//write letter part 2 based on information read from Part 2
+public class Part2 {
+    public static void main(String[] args) {
+        String performance = "";
+        String emotion = "";
+        String lesson = "";
+        String target = "";
+        String how = "";
+        String better = "";
+        try {
+            Scanner in = new Scanner(new FileInputStream("(Part 2)ans the questions.txt"));
+            while (in.hasNextLine()) {
+                String line = in.nextLine();
+                if (line.startsWith("* How")) {
+                    performance = in.nextLine();
+                } else if (line.startsWith("* Are")) {
+                    emotion = in.nextLine();
+                } else if (line.startsWith("* What has")) {
+                    lesson = in.nextLine();
+                } else if (line.startsWith("* Is")) {
+                    target = in.nextLine();
+                } else if (line.startsWith("* What you")) {
+                    how = in.nextLine();
+                } else if (line.startsWith("* What could")) {
+                    better = in.nextLine();
+                }
+            }
+            in.close();
+            
+            // Construct the letter using the extracted information
+            String letterP2 = "It's me again. Finally, it's the end of the term and the DS class has finished! " +
+                              performance + emotion + lesson + target + how + better;
+            String[] word = letterP2.split(" ");
+            try{
+                PrintWriter out = new PrintWriter(new FileOutputStream("OOIRUIZHE_23004947(Part 2).txt"));
+                out.println("Thursday, 18 June 2021.");
+                out.println();
+                for (int i = 0; i < word.length; i++) {
+                    out.print(word[i] + " "); // Print each word with a space separator
+                    if ((i + 1) % 19 == 0) { // Add a newline every 20 words
+                        out.println();
+                    }
+                }
+
+                out.close();
+            }catch(IOException e){
+                System.out.println("Problem with file output.");
+            }
+
+            System.out.println(letterP2); // Print the constructed letter
+        } catch (FileNotFoundException e) {
+            System.out.println("File was not found");
+        } catch (IOException e) {
+            System.out.println("Problem with file output");
+        }
+    }
+}
+
+
+//append both letter part 1 and 2
+public class AppendFiles {
+    public static void main(String[] args) {
+        String filename1 = "OOIRUIZHE_23004947.txt";
+        String filename2 = "OOIRUIZHE_23004947(Part 2).txt";
+
+        try {
+            PrintWriter out = new PrintWriter(new FileWriter("combined_letter.txt"));
+
+            BufferedReader reader1 = new BufferedReader(new FileReader(filename1));
+            String line;
+            while ((line = reader1.readLine()) != null) {
+                out.println(line);
+            }
+            reader1.close();
+
+            // Read and append contents of the second file
+            BufferedReader reader2 = new BufferedReader(new FileReader(filename2));
+            out.println("\n\n");
+            while ((line = reader2.readLine()) != null) {
+                out.println(line);
+            }
+            reader2.close();
+
+            out.close();
+
+            System.out.println("Contents of " + filename1 + " and " + filename2 + " have been appended to combined_letter.txt");
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
 
 
 
