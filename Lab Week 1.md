@@ -390,6 +390,21 @@ public class Account {
 ### Question 3
 ### Tester program
 ```plaintext
+public class Q3 {
+    public static void main(String[] args) {
+        Account Rexton = new Account(1122,20000);
+        Rexton.setAnnualInterestRate(4.5);
+        System.out.println("Initial Balance : "+Rexton.getBalance());
+        Rexton.withdraw(2500);
+        Rexton.deposit(3000);
+        System.out.println("Final Balance : "+Rexton.getBalance());
+        System.out.println("Monthly Interest : "+Rexton.getMonthlyInterest());
+        System.out.println("Date where account created: "+Rexton.getDateCreated());
+    }
+}
+```
+
+
 
 
 
