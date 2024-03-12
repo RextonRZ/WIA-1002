@@ -312,7 +312,7 @@ public class Q2Text4 {
 
 
 ### Question 3
-### Implement a class Account
+#### Implement a class Account
 ```plaintext
 public class Account {
 
@@ -391,7 +391,7 @@ public class Account {
 
 
 ### Question 3
-### Tester program
+#### Tester program
 ```plaintext
 public class Q3 {
     public static void main(String[] args) {
@@ -403,6 +403,191 @@ public class Q3 {
         System.out.println("Final Balance : "+Rexton.getBalance());
         System.out.println("Monthly Interest : "+Rexton.getMonthlyInterest());
         System.out.println("Date where account created: "+Rexton.getDateCreated());
+    }
+}
+```
+
+
+### Question 4
+#### Account1 class 
+```plaintext
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ds.lab;
+
+/**
+ *
+ * @author ooiru
+ * 
+ */
+import java.util.ArrayList;
+import java.util.Date;
+public class Account1 {
+    private String name;
+    private int id;
+    private double balance;
+    private double annualInterestRate;
+    private final Date dateCreated;
+    private final ArrayList<Transaction> transactions;
+    
+    public Account1(){
+        this.id=0;
+        this.name="";
+        this.balance=0;
+        dateCreated = new Date();
+        transactions = new ArrayList<>();
+    }
+    
+    public Account1(int id, String name,double balance){
+        this.id=id;
+        this.name=name;
+        this.balance=balance;
+        dateCreated = new Date();
+        transactions = new ArrayList<>();
+    }
+    
+        public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public double getAnnualInterestRate() {
+        return annualInterestRate;
+    }
+
+    public void setAnnualInterestRate(double annualInterestRate) {
+        this.annualInterestRate = annualInterestRate;
+    }
+    
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+    
+    public double getMonthlyInterestRate(){
+        return annualInterestRate/12;
+    }
+    
+    public double getMonthlyInterest(){
+        return balance*(getMonthlyInterestRate()/100);
+    }
+    
+    public boolean withdraw(double amount){
+        if (amount <= balance) {
+            balance -= amount;
+            transactions.add(new Transaction('W', amount, balance, "Withdraw"));
+            return true;
+        }
+        return false;
+    }
+    
+    public double deposit(double amount) {
+        balance += amount;
+        transactions.add(new Transaction('D', amount, balance, "Deposit"));
+        return balance;
+    }
+    
+    public String toString() {
+        StringBuilder str = new StringBuilder(String.format("Account Summary\nHolder Name: %s\nAnnual Interest Rate: %.2f %%\nBalance: %.2f\n", name, annualInterestRate, balance));
+        str.append(String.format("Transaction History:\n%-30s %5s %10s %10s %15s\n", "Date", "Type", "Amount", "Balance", "Description"));
+
+        for (Transaction transaction : transactions) {
+            str.append(String.format("%-30s %5s %10.2f %10.2f %15s\n",
+                    dateCreated, transaction.getType(), transaction.getAmount(),
+                    transaction.getBalance(), transaction.getDescription()));
+        }
+        return str.toString();
+    }
+}
+```
+
+### Question 4
+#### Transaction class
+```plaintext
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ds.lab;
+
+/**
+ *
+ * @author ooiru
+ */
+import java.util.Date;
+
+public class Transaction {
+    private Date date;
+    private char type;
+    private final double amount;
+    private final double balance;
+    private final String description;
+
+    public Transaction(char type, double amount, double balance, String description) {
+        this.type = type;
+        this.amount = amount;
+        this.balance = balance;
+        this.description = description;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public char getType() {
+        return type;
+    }
+
+    public void setType(char type) {
+        this.type = type;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+}
+
+```
+
+
+### Question 4
+#### Tester class
+```plaintext
+public class Q4 {
+    public static void main(String[] args) {
+        Account1 a= new Account1(1112,"George",1000);
+        a.setAnnualInterestRate(1.5);
+        a.deposit(30);
+        a.deposit(40);
+        a.deposit(50);
+        a.withdraw(5);
+        a.withdraw(4);
+        a.withdraw(2);
+        System.out.println(a);
     }
 }
 ```
