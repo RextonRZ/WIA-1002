@@ -132,7 +132,7 @@ public class Duo<A,B> {
 #### Q7 
 ```plaintext
 public class Q7 {
-    public static void allTransportation(ArrayList<?> list1, ArrayList<?> list2){
+    public static <E> void allTransportation(ArrayList<?> list1, ArrayList<?> list2){
     }
 
     
