@@ -171,7 +171,7 @@ public class Q8 {
         displayList(milesPerHour);
     }
     
-    public static void displayList(ArrayList<?> list){
+    public static <E>void displayList(ArrayList<?> list){
         for (Object lists: list){
             System.out.println(lists);
         }
