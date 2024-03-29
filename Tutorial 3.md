@@ -41,7 +41,7 @@ Candy Machine:
 
 #### Q1(C)Produce a UML class diagram to represent the three classes
 <p align="center">
-<img src="UML Tuto 3 Q1c.png" alt="UML Diagram Tuto3 Q1c" width="296" height="181">
+<img src="UML Tuto 3 Q1c.png" alt="UML Diagram Tuto3 Q1c" width="2960" height="1810">
 </p>
 
 
