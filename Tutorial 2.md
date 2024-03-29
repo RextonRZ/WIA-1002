@@ -1,5 +1,5 @@
 ## WIA1002/WIB1002 Data Structure
-### Tutorial: Generics
+### Tutoria 2: Generics
 
 #### Q1. 
 ```plaintext
