@@ -47,16 +47,8 @@ Candy Machine:
 
 #### Q2
 ```plaintext
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
-package Tutorial3;
+//no precondition because no accepting anything
 
-/**
- *
- * @author ooiru
- */
 public interface BidInterface {
     /***
      * Purpose:Returns the name of the company making this bid.
@@ -114,6 +106,60 @@ public interface BidInterface {
      */
     public double getYearlyCost();
     
+}
+
+
+public interface BidCollectionInterface {
+    /**
+     * Purpose: Adds a bid to this collection
+     * Precond: None
+     * Postcond: The bid was added into the collection
+     * @param toAdd the bid to add
+     */
+    public void add(BidInterface toAdd);
+    
+    
+    /***
+     * Purpose: Return the bid in this collection with best yearly cost
+     * Precond: The collection must not be empty.
+     * Postcond: The bid with the lowest yearly cost was returned.
+     * @param averageHours Average hours of operation per year
+     * @param energyCost Cost in dollars per KWH
+     * @return The bid with lowest yearly cost
+     */
+    public BidInterface getBestYearlyCost(double averageHours, double energyCost);
+    
+    /***
+     * Purpose: Returns the bid in this collection with the best initial cost. 
+     * Precond: The collection must not be empty.
+     * Postcond: The bid with the best initial cost was returned.
+     * @return The bid with the best initial cost.
+     */
+    public BidInterface getBestInitialCost();
+    
+    
+    /****
+     * Purpose: Clears all of the items from this collection.
+     * Precond: None
+     * Postcond: All of the items from this collection were cleared.
+     */
+    public void clear();
+    
+    /****
+     * Purpose: Returns the number of items in this collection.
+     * Precond: None
+     * Postcond: The number of items in this collection was returned.
+     * @return The number of items in the collection
+     */
+    public int getLength();
+    
+    /***
+     * Purpose: Check whether this collection is empty.
+     * Precond: None
+     * Postcond: The condition of the collection whether it is empty a not was returned.
+     * @return the condition of the collection to check whether it is empty.
+     */
+    public boolean isEmpty();
 }
 
 ```
