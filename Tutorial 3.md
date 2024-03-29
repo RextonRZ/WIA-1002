@@ -45,3 +45,77 @@ Candy Machine:
 </p>
 
 
+#### Q2
+```plaintext
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
+package Tutorial3;
+
+/**
+ *
+ * @author ooiru
+ */
+public interface BidInterface {
+    /***
+     * Purpose:Returns the name of the company making this bid.
+     * Precond: None
+     * Postcond:The name was returned
+     * @return The name of the company making the bid
+     */
+    public String getCompanyName();
+    
+    /***
+     * Purpose:Returns the description of the air conditioner that this bid is for.
+     * Precond:None
+     * Postcond:The description is returned.
+     * @return The description of the air conditioner 
+     */
+    public String getDescription();
+    
+    /***
+     * Purpose:Returns the capacity of this bid's AC in tons (1 ton = 12,000 BTU).
+     * Precond:None
+     * Postcond:The capacity is returned.
+     * @return The capacity of this bid's AC in tons
+     */
+    public double getCapacity();
+    
+    /***
+     * Purpose:Returns the seasonal efficiency of this bid's AC (SEER).
+     * Precond:None
+     * Postcond:The seasonal efficiency is returned.
+     * @return The seasonal efficiency of this bid's AC (SEER)
+     */
+    public double getEfficiency();
+    
+    /***
+     * Purpose:Returns the cost of this bid's AC.
+     * Precond:None
+     * Postcond:The cost of this bid's AC is returned.
+     * @return The cost of this bid's AC.
+     */
+    public double getCost();
+    
+    /***
+     * Purpose:Returns the cost of installing this bid's AC.
+     * Precond:None
+     * Postcond:The cost of installing this bid's AC is returned.
+     * @return The cost of installing this bid's AC.
+     */
+    public double getInstallCost();
+    
+    /***
+     * Purpose:Returns the yearly cost of operating this bid's AC.
+     * Precond:None
+     * Postcond:The yearly cost of operating this bid's AC is returned.
+     * @return The yearly cost of operating this bid's AC.
+     */
+    public double getYearlyCost();
+    
+}
+
+```
+
+
