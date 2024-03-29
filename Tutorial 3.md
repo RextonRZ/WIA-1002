@@ -25,7 +25,7 @@ Dispenser:
 * getProductCost: Retrieve the cost for each item
 * makeSales: Reduce the number of items in the dispenser by 1
 * setCost: Set the cost of the product
-* setNumberofItems: Set the num of items in the dispenser
+* setNumberOfItems: Set the num of items in the dispenser
 
 Cash Register:
 * acceptAmount: Update the total cash
@@ -38,5 +38,10 @@ Candy Machine:
 * makeSelection: Allow the customers to select the product
 ```
 
+
+#### Q1(C)Produce a UML class diagram to represent the three classes
+<p align="center">
+<img src="UML Tuto 3 Q1c.png" alt="UML Diagram Tuto3 Q1c" width="296" height="181">
+</p>
 
 
