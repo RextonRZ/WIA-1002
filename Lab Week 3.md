@@ -157,7 +157,157 @@ public class ArrayBag<T> implements BagInterface<T>{
     public T[] toArray() {
         return null; 
     }
+}
+```
+
+### Question 2
+```plaintext
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package lab3;
+
+/**
+ *
+ * @author ooiru
+ */
+public class ArrayBag<T> implements BagInterface<T>{
+    private T[] bag;
+    private static final int DEFAULT_CAPACITY = 25;
+    private int numberOfEntries;
+
+    public ArrayBag() {
+    }
+
+    public ArrayBag(int capacity) {
+        @SuppressWarnings("unchecked")
+        T[] tempbag = (T[])new Object[capacity];
+        bag = tempbag;
+        numberOfEntries = 0;
+    }
+    
+    /***
+     * Gets the current number of entries in this bag.
+     * 
+     * @return the integer number of entries currently in the bag 
+     */
+    @Override
+    public int getCurrentSize() {
+        return 0;
+    }
+
+    /****
+     * See whether the bag is Full
+     * 
+     * @return true if the bag is full. or false if not
+     */
+    @Override
+    public boolean isFull() {
+        return false;
+    }
+    
+    /***
+     * See whether the bag is empty
+     * 
+     * @return true if the bag is empty, or false if not
+     */
+    @Override
+    public boolean isEmpty() {
+       return false;
+    }
 
     
-    
+    /***
+    * Adds a new entry to this bag
+    * 
+    * @param newEntry the object to be added as a new entry
+    * @return true if the addition is successful, or false if not
+    */
+    @Override
+    public boolean add(Object newEntry) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    /***
+     * Removes one unspecified entry from this bag if possible
+     * 
+     * @return either the remove entry, if the removal is successful
+     */
+    @Override
+    public T remove() {
+       return null;
+    }
+
+    /***
+     * Remove one occurrence of a given entry from this bag
+     * 
+     * @param anEntry the entry to be removed
+     * @return true if the removal was successful, or false if not
+     */
+    @Override
+    public boolean remove(Object anEntry) {
+        return false;
+    }
+
+    /***
+     * Removes all entries from this bag
+     */
+    @Override
+    public void clear() {
+        
+    }
+
+    /***
+     * Count the number of times a given entries in this bag
+     * 
+     * @param anEntry the entry to be counted
+     * @return the number of times anEntry appears in this bag
+     */
+    @Override
+    public int getFrequencyOf(Object anEntry) {
+        return 0;
+    }
+
+    /***
+     * Tests whether this bag contains a given entry
+     * 
+     * @param anEntry the entry to locate
+     * @return true if this bag contains anEntry, or False if not
+     */
+    @Override
+    public boolean contains(T anEntry) {
+        return false;
+    }
+
+    /***
+     * Retrieves all entries that are in this bag
+     * 
+     * @return a newly allocated array of all the entries in the bag
+     */
+    @Override
+    public T[] toArray() {
+        return null; 
+    }
+
+    public BagInterface<T> union(BagInterface<T> anotherBag){
+        //First, we calculate the size of the new bag, which is the sum of the sizes of both bags
+        int newSize = this.getCurrentSize() +anotherBag.getCurrentSize();
+        
+        //Create the new bag with the combined capacity
+        ArrayBag<T> combineBag = new ArrayBag<>(newSize);
+       
+        //Add all elements from this bag
+        for(int i=0;i<this.numberOfEntries;i++){
+            combineBag.add(this.bag[i]);
+        }
+        
+        //Add all elements from the other bag
+        T[] otherBagArray = anotherBag.toArray();//change to array
+        for(T item: otherBagArray)
+            combineBag.add(item);
+        
+        return combineBag;
+    }
 }
+```
