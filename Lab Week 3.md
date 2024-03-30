@@ -162,16 +162,6 @@ public class ArrayBag<T> implements BagInterface<T>{
 
 ### Question 2
 ```plaintext
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package lab3;
-
-/**
- *
- * @author ooiru
- */
 public class ArrayBag<T> implements BagInterface<T>{
     private T[] bag;
     private static final int DEFAULT_CAPACITY = 25;
