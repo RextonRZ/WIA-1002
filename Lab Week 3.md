@@ -94,7 +94,7 @@ public class ArrayBag<T> implements BagInterface<T>{
     */
     @Override
     public boolean add(Object newEntry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     /***
@@ -216,7 +216,7 @@ public class ArrayBag<T> implements BagInterface<T>{
     */
     @Override
     public boolean add(Object newEntry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     /***
