@@ -11,7 +11,9 @@ Node<Character> tail = node2;
 ```
 
 ##### (b) Draw the nodes from (a).
-
+<p align="center">
+<img src="Tutoq1.png" alt="Node from (a)" width="400" height="370">
+</p>
 
 
 
