@@ -26,6 +26,6 @@ head.next = tail;
 
 ##### (d) Create a new node, firstNode. Add this new node at the first location of all existing nodes. Draw these nodes. 
 <p align="center">
-<img src="Tutoq1(c).png" alt="node1 accessing node2 (c)" width="400" height="370">
+<img src="Tutoq1(d).png" alt="node1 accessing node2 (c)" width="400" height="370">
 </p>
 
