@@ -57,7 +57,7 @@ head = firstNode;
 ##### (g) Write codes to assign the firstNode to the first location. 
 ```plaintext
 public void addFirst(Character e){
-  Node<Character> firstNode = new Node<>('a');
+  Node<Character> firstNode = new Node<Character>(e);
   firstNode.next = head;
   head = firstNode;
   size+=1;
@@ -66,6 +66,77 @@ public void addFirst(Character e){
   }
 }
 ```
+
+##### (h) Repeat (d) – (f), for the following operations :
+##### (h) (i)addLast() – value of element, c
+```plaintext
+public void addLast(Character c){
+  Node<Character> lastNode = new Node<Character>(c);
+    if (tail == null) {
+        head = lastNode;
+        tail = lastNode;
+    } else {
+        tail.next = lastNode;
+        tail = lastNode;
+    }
+    size++; 
+}
+
+//in main method call:
+//list.addLast('c');
+
+```
+##### (h) (ii)add(int index, E e) – value of element, d
+```plaintext
+public void add(int index, E e) {
+    if (index == 0) {
+        addFirst(e);
+    } else if (index >= size) {
+        addLast(e);
+    } else {
+        Node<E> current = head; //set current as head
+        for (int i = 1; i < index; i++) {  //iterate before the adding node
+            current = current.next;
+        }
+        Node<E> temp = current.next; 
+        current.next = new Node<>(e); 
+        current.next.next = temp; //
+        size++;
+    }
+}
+
+// Call add method to add element 'd' at index 3
+//list.add(3, 'd');
+```
+
+##### (h) (iii) removeFirst() 
+```plaintext
+
+
+
+
+
+```
+
+##### (h)(iv) removeLast()
+```plaintext
+
+
+
+
+
+```
+
+##### (h) (v) remove(int index) – remove at index 1
+```plaintext
+
+
+
+
+
+```
+
+
 
 
 
