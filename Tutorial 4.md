@@ -35,3 +35,38 @@ head = firstNode;
 <img src="Tutoq1(d).png" alt="node1 accessing node2 (c)" width="400" height="370">
 </p>
 
+##### (e) If we have no information about the status of a linked-list, what are the conditions we need to consider to perform the operation in (d)?
+```plaintext
+* Add node
+* Is the new node, the only node in the list?
+* If there is already many nodes in the list
+```
+
+##### (f) Write a list of operations/steps/pseudocode needed to add the firstNode to the first location.
+```plaintext
+* Condition 1:
+  -> If tail == null, then tail == head
+       - This refers to the same node (both head and tail)
+
+* Condition 2:
+  -> Create a new node object
+  -> Assign the new node's(firstNode) next reference to the current first node (current head)
+  -> Assign the new node(firstNode) as the head
+```
+
+##### (g) Write codes to assign the firstNode to the first location. 
+```plaintext
+public void addFirst(Character e){
+  Node<Character> firstNode = new Node<>('a');
+  firstNode.next = head;
+  head = firstNode;
+  size+=1;
+  if(tail == null){
+    tail = head;
+  }
+}
+```
+
+
+
+
