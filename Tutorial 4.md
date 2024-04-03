@@ -16,6 +16,12 @@ Node<Character> tail = node2;
 </p>
 
 
-
+##### (c)  Write a statement/code for node1 accessing the node2. Modify 1(b) to show this
+```plaintext
+head.next = tail;
+```
+<p align="center">
+<img src="Tutoq1(c).png" alt="node1 accessing node2 (c)" width="400" height="370">
+</p>
 
 
