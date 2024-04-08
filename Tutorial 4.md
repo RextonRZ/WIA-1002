@@ -207,11 +207,29 @@ public void operationX(E e) {
 #### Question 3
 ##### Given the following nodes. Answer the following:
 <p align="center">
-<img src="Tutorial4_q3.png" alt="node1 accessing node2 (c)" width="893" height="357">
+<img src="Tutorial4_q3.png" alt="Q4 Nodes" width="893" height="357">
 </p>
 
+##### 3(a) Based on the above figure, what is the name of the method for above operation?
+```plaintext
+removeLast()
+```
 
-
+##### 3(b) Write codes to represent the above figure. (Kindly use the variables stated in the figure)
+```plaintext
+public E removeLast(){
+        Node<E> pointer1 = head;
+        for(int i=0; i<size-2; i++){
+            pointer1 = pointer1.next;
+        }
+        Node<E> temp = tail;
+        tail = pointer1;
+        tail.next = null;
+        size--;
+        return temp.element;
+     }
+}
+```
 
 
 
