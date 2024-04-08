@@ -166,6 +166,43 @@ public E remove(int index){
 }
 ```
 
+#### Question 2
+##### Given is a method containing incorrect statements that checks if an element is in a list. 
+```plaintext
+public void operationX(E e) {
+ pointerB.next = pointerB;
+
+ for(int i++; i>size; int i) {
+ System.out.println(current.element);
+ if(current.element = e)
+ }
+
+ Node<E> pointerB = head;
+ return false;
+ }
+```
+
+##### 2(a) What is the name of the method for operationX?
+```plaintext
+public boolean contains(E e)
+```
+
+##### 2(b) Correct the statements by rewriting them in the correct order and syntax. Write the correct/right method name to replace operationX.
+```plaintext
+public void operationX(E e) {
+     Node<E> pointerB = head;
+
+     for(int i=0 ; i<size; i++) {
+         if (pointerB.element.equals(e)){
+              System.out.println(pointerB.element);
+              return true;
+         }
+         pointerB = pointerB.next;
+     }
+     return false;
+ }
+```
+
 
 
 
