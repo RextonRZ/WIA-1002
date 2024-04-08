@@ -155,4 +155,86 @@ public E remove(int index){
 <p align="center">
 <img src="Tutorial4_q4.png" alt="Tutorial 4q" width="702" height="472">
 </p>
+```plaintext
+public boolean contains(E e) {
+        return this.indexOf(e) >= 0;
+    }
+    
+    public E get(int index) {
+        Node<E> current = head;
+        if(index <0 || index>=size) return null;
+        for(int i=0;i<index;i++) current = current.next;
+        return current.element;
+    }
+    
+    public E getFirst(){
+        return this.head.element;
+    }
+    
+    public E getLast(){
+        return this.tail.element;
+    }
+    
+    public int indexOf(E e){
+        Node<E> current = head;
+        int index = 0;
+        
+        while(current!= null){
+            if(current.element == e){
+                return index;
+            }else{
+                current = current.next;
+                index++;
+            }
+        }
+        return -1;
+    }
+    
+    public int lastIndexOf(E e){
+        int index = 0;
+        int lastIndex = -1;
+        Node<E> current = head;
+        while(current != null){
+            if(current.element.equals(e)){
+                lastIndex = index;
+            }
+            current = current.next;
+            index++;
+        }
+        return lastIndex;
+    }
+    
+    public E set(int index, E e){
+        Node<E> current = head;
+        for(int i=0;i<index;i++){
+            current = current.next;
+        }
+        E oldElement = current.element;
+        current.element = e;
+        return oldElement;
+    }
+    
+    public void clear(){
+        head=null;
+        tail = null;
+        size = 0;
+    }
+    
+    public void print(){
+        Node<E> current = head;
+        while(current !=null){
+            System.out.println(current.element+" ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+    
+    public void reverse(){
+        for(int i=size-1;i>=0;i--){
+            System.out.print(get(i)+" ");
+        }
+    }
+```
+
+
 
