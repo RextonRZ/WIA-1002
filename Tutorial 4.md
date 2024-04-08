@@ -149,11 +149,21 @@ public E removeLast(){
 
 ##### (h) (v) remove(int index) – remove at index 1
 ```plaintext
-
-
-
-
-
+public E remove(int index){
+    if(index < 0 || index >= size) return null;
+    else if (index ==0) return removeFirst();
+    else if (index == size -1) return removeLast();
+    else{
+        Node<E> previous = head;
+        for(int i=0; i<index; i++){
+            previous = previous.next;
+        }
+        Node<E> current = previous.next;
+        previous.next = current.next;
+        size--;
+        return current.element;
+     }
+}
 ```
 
 
