@@ -150,3 +150,9 @@ public E remove(int index){
         }
     }
 ```
+
+#### 4) Expand the MyLinkedList by implementing the following methods:
+<p align="center">
+<img src="Tutorial4_q4.png" alt="Tutorial 4q" width="702" height="472">
+</p>
+
