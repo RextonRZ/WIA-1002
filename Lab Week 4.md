@@ -155,7 +155,7 @@ public E remove(int index){
 <p align="center">
 <img src="Tutorial4_q4.png" alt="Tutorial 4q" width="702" height="472">
 </p>
-```plaintext
+
 public boolean contains(E e) {
         return this.indexOf(e) >= 0;
     }
@@ -234,7 +234,18 @@ public boolean contains(E e) {
             System.out.print(get(i)+" ");
         }
     }
+
+### Question 2
+##### A method called getMiddleValue() returns the value of the middle element of a linked list. The method signature is given as follows :
+##### public E getMiddleValue()
+##### Write the codes for the getMiddleValue().
+```plaintext
+    public E getMiddleValue(){
+        Node<E> current = head;
+        for (int i = 0; i < (size + 1) / 2; i++) {
+            current = current.next;
+        }
+        return current.element;
+    }
 ```
-
-
 
