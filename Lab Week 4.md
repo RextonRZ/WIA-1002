@@ -66,6 +66,17 @@ public class MyLinkedList <E> {
     }
 ```
 ##### b. public void addLast(E e)
+```plaintext
+public void addLast(E e){
+    if(tail == null)
+        head = tail = new Node<>(e);
+    else{
+        tail.next = new Node<>(e);
+        tail = tail.next;
+    }
+    size++;
+}
+```
 ##### c. public void add(int index, E e)
 ##### d. public E removeFirst()
 ##### e. public E removeLast()
