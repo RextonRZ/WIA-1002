@@ -110,5 +110,27 @@ public E removeFirst(){
 
 
 ##### e. public E removeLast()
+```plaintext
+public E removeLast(){
+        if(size == 0) return null;
+        else if (size == 1){
+            Node<E> temp = head;
+            head = tail = null;
+            size = 0;
+            return temp.element;
+        }
+        else{
+            Node<E> current = head;
+            for(int i=0;i<size-2;i++){
+                current = current.next;
+            }
+            Node<E> temp = tail;
+            tail = current;
+            tail.next = null;
+            size--;
+            return temp.element;
+        }
+    }
+```
 ##### f. public E remove(int index)
 
