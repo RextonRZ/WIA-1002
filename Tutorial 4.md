@@ -204,6 +204,13 @@ public void operationX(E e) {
 ```
 
 
+#### Question 3
+##### Given the following nodes. Answer the following:
+<p align="center">
+<img src="Tutorial4_q3.png" alt="node1 accessing node2 (c)" width="893" height="357">
+</p>
+
+
 
 
 
