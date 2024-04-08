@@ -235,6 +235,72 @@ public boolean contains(E e) {
         }
     }
 
+
+
+#### 5) Write a test program called TestLinkedList that creates a list from MyLinkedList class. Using the methods in (3) and (4), do the following:
+##### a. Append the following : a, b, c, d, e
+##### b. Print all the elements in the list.
+##### c. Reverse all the elements in the list.
+##### d. Retrieve the number of elements in the list.
+##### e. Retrieve the first and last value.
+##### f. Delete the third value.
+##### g. Retrieve the index location for the second and third value.
+##### h. Checks if the list has the value ‘c’.
+##### i. Replace the items individually with the following: j,a,v,a
+```plaintext
+public class TestLinkedList {
+    public static void main(String[] args) {
+        MyLinkedList<Character> list= new MyLinkedList<>(); 
+        
+        //a) Append the following : a, b, c, d, e
+        list.addFirst('a');
+        list.add(1, 'b');
+        list.add(2, 'c');
+        list.add(3, 'd');
+        list.add(4, 'e');
+        
+        //b) Print all the elements in the list
+        System.out.println("Elements in the list:");
+        list.print();
+        
+        //c) Reverse all the elements in the list
+        System.out.println("\nElements in the list(reversed order)");
+        list.reverse();
+        System.out.println("");
+        
+        //d) Retrieve the number of elements in the list
+        System.out.println("\nNumber of elements in the list: ");
+        list.indexOf(list.getLast());
+        
+        //e) Retrieve the first and last value
+        System.out.println("First value: "+list.getFirst());
+        System.out.println("Last value: "+list.getLast());
+        
+        //f) Delete the third value
+        System.out.println("");
+        System.out.println("Elements removed: "+list.remove(2));
+        System.out.println("Elements left in the list:");
+        list.print();
+        
+        //g) Retrieve the index location for the second and third value
+        System.out.println("");
+        System.out.printf("Index Location for b: %s\n", list.indexOf('b'));
+        System.out.printf("Index Location for c: %s\n", list.indexOf('d'));
+        
+        //h) Check if the list has the value of 'c'
+        System.out.println("\nValue of 'c' is inside the list: "+ list.contains('c'));
+        
+        //i) Replace the items individually with the following: j,a,v,a
+        list.set(0, 'j');
+        list.set(1, 'a');
+        list.set(2, 'v');
+        list.set(3, 'a');
+        System.out.println("\nElements in the list after replacement: ");
+        list.print();
+    }
+}
+```
+
 ### Question 2
 ##### A method called getMiddleValue() returns the value of the middle element of a linked list. The method signature is given as follows :
 ##### public E getMiddleValue()
