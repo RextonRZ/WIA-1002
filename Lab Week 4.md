@@ -55,6 +55,16 @@ public class MyLinkedList <E> {
 
 #### 3) Implement the following methods from tutorial in this class:
 ##### a. public void addFirst(E e)
+```plaintext
+    public void addFirst(E e){
+        Node<E> newNode = new Node<E>(e);
+        newNode.next = head;
+        head = newNode;
+        if(tail==null)
+            tail=head;
+        size++;
+    }
+```
 ##### b. public void addLast(E e)
 ##### c. public void add(int index, E e)
 ##### d. public E removeFirst()
