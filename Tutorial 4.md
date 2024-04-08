@@ -111,11 +111,16 @@ public void add(int index, E e) {
 
 ##### (h) (iii) removeFirst() 
 ```plaintext
-
-
-
-
-
+public E removeFirst(){
+  if (size==0){ return null;}
+  else{
+      Node<E> temp = head;
+      head = head.next;
+      size--;
+      if(head == null)
+          tail = null;
+  }return temp.element;
+}
 ```
 
 ##### (h)(iv) removeLast()
