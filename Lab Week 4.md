@@ -36,3 +36,20 @@ public class Node<T> {
     }
 }
 ```
+
+#### 2) Write a class called MyLinkedList. The class should have the following :
+##### a. Default constructor
+##### b. Nodes for head and tail
+```plaintext
+public class MyLinkedList <E> {
+    private Node<E> head;
+    private Node<E> tail;
+    private int size = 0;
+
+    public MyLinkedList() {
+        head=null;
+        tail=null;
+    }
+}
+```
+
