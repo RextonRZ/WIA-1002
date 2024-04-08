@@ -78,6 +78,22 @@ public void addLast(E e){
 }
 ```
 ##### c. public void add(int index, E e)
+```plaintext
+    public void add(int index, E e){
+        if(index ==0) addFirst(e);
+        else if (index>= size) addLast(e);
+        else{
+            Node<E> current = head;
+            for(int i=1;i<index;i++){
+                current = current.next;
+            }
+            Node<E> temp = current.next;
+            current.next= new Node<>(e);
+            (current.next).next = temp;
+            size++;
+        }
+    }
+```
 ##### d. public E removeFirst()
 ##### e. public E removeLast()
 ##### f. public E remove(int index)
