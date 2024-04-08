@@ -95,6 +95,20 @@ public void addLast(E e){
     }
 ```
 ##### d. public E removeFirst()
+```plaintext
+public E removeFirst(){
+        if(size == 0 ) return null;
+        else{
+            Node<E> temp = head;
+            head = head.next;
+            size--;
+            if (head == null) tail = null;
+            return temp.element;
+        }
+    }
+```
+
+
 ##### e. public E removeLast()
 ##### f. public E remove(int index)
 
