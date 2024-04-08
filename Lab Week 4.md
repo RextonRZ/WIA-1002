@@ -133,4 +133,20 @@ public E removeLast(){
     }
 ```
 ##### f. public E remove(int index)
-
+```plaintext
+public E remove(int index){
+        if(index<0 || index>= size)return null;
+        else if(index == 0) return removeFirst();
+        else if(index == size-1) return removeLast();
+        else{
+            Node<E> previous = head;
+            for(int i=1;i<index;i++){
+                previous = previous.next;
+            }
+            Node<E> current = previous.next;
+            previous.next = current.next;
+            size--;
+            return current.element;
+        }
+    }
+```
