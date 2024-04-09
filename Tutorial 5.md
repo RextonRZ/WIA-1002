@@ -36,3 +36,7 @@ Line 10 to Line 21 adds the element `e` of generic type `E` into the linked list
 
 The main purpose of `xyz()` is to insert a node of element `e` into the specific `index` of the linked list.
 
+##### c) Obviously, there are some bugs in the source code. Debug the code and make it concise and simpler. 
+```plaintext
+```
+
