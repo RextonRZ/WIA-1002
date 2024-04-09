@@ -29,10 +29,10 @@
 ##### Given method xyz with 2 arguments:
 ##### a) Based on the above source code, explain what the lines of code do from line 10 – 21.
 
-Line 10 to Line 21 adds the element <mark>e</mark> of generic type ~~E~~ into the linked list at the index of ~~index~~. Line 10 to 14 adds ~~e~~ to the first index of the linked list, whereas line 14 to line 21 adds ~~e~~ to any index position in the linked list.
+Line 10 to Line 21 adds the element e of generic type E into the linked list at the index of index. Line 10 to 14 adds e to the first index of the linked list, whereas line 14 to line 21 adds e to any index position in the linked list.
 
 
 ##### b) What is the main purpose of the method xyz()?
 
-The main purpose of ~~xyz()~~ is to insert a node of element ~~e~~ into the specific ~~index~~ of the linked list.
+The main purpose of xyz() is to insert a node of element e into the specific index of the linked list.
 
