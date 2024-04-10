@@ -95,7 +95,13 @@ Finally, it sets the references of `temp` to null to sever any connections and d
 <img src="Tutorial5_q2b.png" alt="disconnect" width="1101" height="567">
 </p>
 
-##### After deletion
+##### After deletion: 
 <p align="center">
 <img src="Tutorial5_q2c.png" alt="Final" width="877" height="209">
+</p>
+
+#### Question 3
+##### A doubly linked list keeps a set of characters. The head, the middle and the tail nodes respectively contains alphabet ‘a’, ‘b’ and ‘c’. These nodes are in successive order. Create a new node that contains alphabet ‘z’. Add this new node at the last location of this linked list. Draw all of these nodes including their correct references. 
+<p align="center">
+<img src="Tutorial5_q3.png" alt="Final" width="877" height="209">
 </p>
