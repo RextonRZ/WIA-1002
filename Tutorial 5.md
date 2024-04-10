@@ -86,13 +86,13 @@ Finally, it sets the references of `temp` to null to sever any connections and d
 
 ##### b) Draw the nodes for lines 7 - 10 
 <p align="center">
-<img src="Tuto5_q2.png" alt="New Link" width="1101" height="567">
+<img src="Tutorial5_q2.png" alt="New Link" width="1101" height="567">
 </p>
 
 <p align="center">
-<img src="Tuto5_q2b.png" alt="disconnect" width="1101" height="567">
+<img src="Tutorial5_q2b.png" alt="disconnect" width="1101" height="567">
 </p>
 
 <p align="center">
-<img src="Tuto5_q2c.png" alt="Final" width="877" height="209">
+<img src="Tutorial5_q2c.png" alt="Final" width="877" height="209">
 </p>
