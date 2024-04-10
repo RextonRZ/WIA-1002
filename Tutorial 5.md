@@ -85,14 +85,17 @@ Finally, it sets the references of `temp` to null to sever any connections and d
 ```
 
 ##### b) Draw the nodes for lines 7 - 10 
+##### Node condition at Line 7 and 8:
 <p align="center">
 <img src="Tutorial5_q2.png" alt="New Link" width="1101" height="567">
 </p>
 
+##### Node condition at Line 9 and 10:
 <p align="center">
 <img src="Tutorial5_q2b.png" alt="disconnect" width="1101" height="567">
 </p>
 
+##### After deletion
 <p align="center">
 <img src="Tutorial5_q2c.png" alt="Final" width="877" height="209">
 </p>
