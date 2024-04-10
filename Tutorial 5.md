@@ -82,7 +82,7 @@ At line 3-5, it then iterates through the list, moving `temp` to the node at spe
 At line 6, it retrieves the element stored in the node at that index, so that will be returned after that.
 At line 7-10,  we link the `previous` node and `next` node of the node of index `index` together and then disconnect the node at index `index` to both nodes.
 Finally, it sets the references of `temp` to null to sever any connections and decrements the size of the list.
-
+```
 
 ##### b) Draw the nodes for lines 7 - 10
 
