@@ -82,9 +82,15 @@ public boolean contains(E e){
 
 ##### iv. public void clear()
 ##### Empty all elements in the list and return a statement that reports that the list is empty.
-
-v. public void display()
-Display all values from the list in a successive order.
+```plaintext
+    public void clear(){
+        head=null;
+        tail = null;
+        size = 0;
+    }
+```
+##### v. public void display()
+##### Display all values from the list in a successive order.
 
 
 
