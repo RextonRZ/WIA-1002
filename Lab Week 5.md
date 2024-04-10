@@ -91,6 +91,15 @@ public boolean contains(E e){
 ```
 ##### v. public void display()
 ##### Display all values from the list in a successive order.
-
+```plaintext
+public void display(){
+        SNode<E> current = head;
+        while(current != null){
+            System.out.println(current.element+" ");
+            current = current.next;
+        }
+        System.out.println("");
+    }
+```
 
 
