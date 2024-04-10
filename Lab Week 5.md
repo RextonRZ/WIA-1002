@@ -65,12 +65,23 @@ public E removeInitial(){
     }
 ```
 
-iii. public boolean contains(E e)
-Search for an element and returns true if this list contains the searched element
+##### iii. public boolean contains(E e)
+##### Search for an element and returns true if this list contains the searched element
+```plaintext
+public boolean contains(E e){
+        SNode<E> current = head;
+        while (current != null){    
+            if(current.element.equals(e)){
+                return true;
+            }
+            current=current.next;
+        }
+        return false;
+    }
+```
 
-iv. public void clear()
-Empty all elements in the list and return a statement that reports that the list is
-empty.
+##### iv. public void clear()
+##### Empty all elements in the list and return a statement that reports that the list is empty.
 
 v. public void display()
 Display all values from the list in a successive order.
