@@ -152,5 +152,132 @@ of student’s names.
 * Calculate the number of students in the list.
 * Rename existing student’s name in the list with the new one specified by the admin staff.
 * Delete a student name as specified by the admin staff.
+```plaintext
+public class StudentManagementSystem<E> {
+    SNode<E> head;
+    SNode<E> tail;
+    int size = 0;
 
+    public StudentManagementSystem() {
+        this.head = null;
+        this.tail=null;
+    }
+    
+    public void add(E e){
+        SNode<E> newStudent = new SNode<>(e);
+        if(head == null) head = tail = newStudent;
+        else{
+            tail.next = newStudent;
+            tail = tail.next;
+        }
+        size++;
+    }
+    
+    public void removeElement(E e) {
+        if(size==0) throw new IllegalStateException("Cannot remove from an empty list");
+        if (head.element == e){
+            head = head.next;
+            size--;
+            return; // Terminate the method 
+        }
+        SNode<E> current = head;
+        while(current.next !=null){
+            if(current.next.element.equals(e)){
+                current.next = current.next.next;
+                size--;
+                return; // Terminate the method 
+            }
+            current = current.next;
+        }
+        throw new IllegalStateException("Element not found");
+    }
+    
+    public void printList() {
+        SNode<E> current = head;
+        while(current != null){
+            System.out.printf("%s", current.element.toString());
+            current = current.next;
+            System.out.printf("%s ", (current == null) ? "." : ","); //if current is not null will print ','
+        }
+    }
+    
+     public int getSize() {
+         return this.size;
+     }
+    
+    public boolean contains(E e) {
+        SNode<E> temp = head;
+        while(temp != null){
+            if(temp.element.equals(e)){
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+    
+    public void replace(E e, E newE) {
+         if(size==0) throw new IllegalStateException("The list is empty");
+         SNode<E> current = head;
+         while (current !=null){
+             if(current.element.equals(e)){
+                 current.element = newE;
+                 return;
+             }
+             current = current.next;
+         }
+         throw new IllegalStateException("Element not found");
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        StudentManagementSystem<String> a = new StudentManagementSystem<>();
+        
+        //Input name 
+        System.out.println("Enter your student name list. Enter 'n' to end.....");
+        String name = sc.nextLine();
+        while (!name.equalsIgnoreCase("n")) {
+            a.add(name);
+            name = sc.nextLine();
+        }
+        System.out.println();
+        
+        //Display results
+        System.out.println("You have entered the following students' name : ");
+        a.printList();
+        
+        //Display size
+        System.out.println("\n\nThe number of students entered is : "+a.getSize());
+    
+        //Rename part
+        System.out.println("\nAll the names entered are correct? Enter 'r' to rename the student name, 'n' to proceed.");
+        String rename = sc.nextLine();
+        if(rename.equalsIgnoreCase("r")){
+            System.out.println("\nEnter the existing student name that you want to rename :");
+            String entered = sc.nextLine();
+            System.out.println("\nEnter the new name : ");
+            String newname = sc.nextLine();
+            
+            a.replace(entered, newname);
+            System.out.println("\nThe new student list is :");
+            a.printList();
+            System.out.println("\n\nDo you want to remove any of your student name? Enter 'y' for yes, 'n' to proceed.");
+            String remove = sc.nextLine();
+            if(remove.equalsIgnoreCase("y")){
+                System.out.println("\nEnter a student name to remove :");
+                String remove1 = sc.nextLine();
+                a.removeElement(remove1);
+                System.out.println("");
+                System.out.println("The number of updated student is : "+a.getSize());
+                System.out.println("The updated student list is :");
+                a.printList();
+
+            }
+            
+        }
+        System.out.println("\n\nAll student data captured complete. Thank you! ");
+    }
+}
+```
 
