@@ -101,5 +101,56 @@ public void display(){
         System.out.println("");
     }
 ```
+#### 4) Write a test program called TestSList in the SList package. Using the appropriate methods you implemented in SList<E>, do the following:
+##### 1) Append the following values individually: “Linked list, is, easy.”
+##### 2) Display these values.
+##### 3) Remove the word “Linked list” and display the removed value.
+##### 4) Check if ‘difficult’ is in the list.
+##### 5) Clear the list.
+
+```plaintext
+public class TestSList {
+    public static void main(String[] args) {
+        SList<String> a= new SList<>();
+        
+        //1) Append the following values individually: “Linked list, is, easy.”
+        a.appendEnd("Linked list");
+        a.appendEnd("is");
+        a.appendEnd("easy.");
+        
+        //2) Display these values.
+        a.display();
+        
+        //3) Remove the word “Linked list” and display the removed value. 
+        a.removeInitial();
+        a.display();
+        
+        //4) Check if ‘difficult’ is in the list. 
+        System.out.println(a.contains("difficult"));
+        
+        //5) Clear the list.
+        a.clear();
+        a.display();
+    }
+}
+```
+
+### Question 2
+#### A kindergarten needs to use an online student management system enabling its admin staff to manage their student list. Write a program using singly linked list to demonstrate the following:
+
+##### i) public void add(E e)
+##### ii) public void removeElement(E e)
+##### iii) public void printList()
+##### iv) public int getSize()
+##### v) public boolean contains(E e)
+##### vi) public void replace(E e, E newE) 
+
+##### The program should demonstrate the following functions:
+* Admin staff shall be able to interact with the program. The admin staff should enter a list
+of student’s names.
+* Display the list of the entered student’s names.
+* Calculate the number of students in the list.
+* Rename existing student’s name in the list with the new one specified by the admin staff.
+* Delete a student name as specified by the admin staff.
 
 
