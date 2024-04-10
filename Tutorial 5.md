@@ -38,5 +38,25 @@ The main purpose of `xyz()` is to insert a node of element `e` into the specific
 
 ##### c) Obviously, there are some bugs in the source code. Debug the code and make it concise and simpler. 
 ```plaintext
+public void xyz(int index,E e){
+     if(index<0 ) throw new IndexOutOfBoundException();
+     if(index >= size ) this.addLast(e);
+     Node<E> current=head;
+     Node<E> temp = new Node<>(e);
+
+       if(index==0) { //same with addFirst(e);
+          temp.next=head;
+          head=temp;
+       }else{
+          for (int i = 1; i < index; i++) {
+              current=current.next;
+          }
+          temp.next=current.next;
+          current.next=temp;
+       }
+       size++;
+}
+
+
 ```
 
