@@ -74,3 +74,16 @@ public void xyz(int index,E e){
 12 }
 ```
 
+##### Based on the source code above, assume the index given is 3
+##### a) Explain what the lines of code do from line 2-11.
+```plaintext
+At line 2, it starts by setting a temporary node `temp` to the `head` of the list.
+At line 3-5, it then iterates through the list, moving `temp` to the node at specified index.
+At line 6, it retrieves the element stored in the node at that index, so that will be returned after that.
+At line 7-10,  we link the `previous` node and `next` node of the node of index `index` together and then disconnect the node at index `index` to both nodes.
+Finally, it sets the references of `temp` to null to sever any connections and decrements the size of the list.
+
+
+##### b) Draw the nodes for lines 7 - 10
+
+
