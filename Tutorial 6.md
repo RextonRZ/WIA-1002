@@ -16,3 +16,7 @@
 <img src="Q1Tuto6.png" alt="Question1tuto6ques" width="826" height="511">
 </p>
 
+<p align="center">
+<img src="Q1Tuto6(b).png" alt="Question1tuto6quesb" width="691" height="316">
+</p>
+
