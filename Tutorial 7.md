@@ -97,4 +97,18 @@ Y = 7
 9
 ```
 
+##### Provide and explain three operations / functions of Linked List based Queue that you can add to the GenericQueue class, other than those discussed in the lecture (i.e., enqueue, dequeue and getSize – from Slide 10 in the lecture slide).
+```plaintext
+1) peek() method, where it returns the first element in the queue without actually removing it.
+
+2) isEmpty() method, where it returns a boolean value to check if the queue is empty.
+
+3) clear() method, where it clears the queue by setting the head and the tail pointer towards null.
+
+4) indexOf(T element), where it returns the index of the first occurrence of the specified element in the queue
+
+5) remove(T element), where it removes the first occurrence of the specified element in the queue
+
+```
+
 
