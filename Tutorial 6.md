@@ -29,30 +29,36 @@
 ```plaintext
 Yes
 
-stackA.push(stack.pop());
-stackA.push(stack.pop());
-stack.pop();
-stackA.pop();
-stackA.pop();
+push(1);
+pop(1);
+push(2);
+pop(2);
+push(3);
+pop(3);
 ```
 
 ##### (b) 2-3-1
 ```plaintext
 Yes
 
-stackB.push(stack.pop());
-stack.pop();
-stackB.pop();
-stack.pop();
+push(1);
+push(2);
+pop(2);
+push(3);
+pop(3);
+pop(1);
 ```
 
 ##### (c) 3-2-1
 ```plaintext
 Yes
 
-stack.pop();
-stack.pop();
-stack.pop();
+push(1);
+push(2);
+push(3);
+pop(3);
+pop(2);
+pop(1);
 ```
 
 
@@ -60,11 +66,12 @@ stack.pop();
 ```plaintext
 Yes
 
-stackD.push(stack.pop)
-stackE.push(stack.pop)
-stack.pop();
-stackE.pop();
-stackD.pop();
+push(1);
+pop(1);
+push(2);
+push(3);
+pop(2);
+pop(1);
 ```
 
 #### Question 4:
