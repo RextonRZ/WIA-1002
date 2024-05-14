@@ -25,3 +25,18 @@ H │  0  0  0  0  0  0  0  0  1  │
 I │  0  0  0  0  0  0  0  0  0  │
   └─                           ─┘
 ```
+
+#### Question 2
+##### 2. Represent the graph in question 1 using a 2 dimensional array. You use the adjacency matrix or the adjacency list for this purpose?
+```plaintext
+int[][] adjacencymatrix = {{0,0,1,1,0,0,0,0,0},
+                           {0,0,0,1,0,0,0,0,0},
+                           {0,0,0,0,0,1,1,0,0},
+                           {0,0,0,0,0,1,0,0,0},
+                           {0,0,0,0,0,0,1,0,0},
+                           {0,0,0,0,0,0,0,1,0},
+                           {0,0,0,0,0,0,0,1,0},
+                           {0,0,0,0,0,0,0,0,1},
+                           {0,0,0,0,0,0,0,0,0}
+}
+```
