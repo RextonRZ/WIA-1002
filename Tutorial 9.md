@@ -31,7 +31,7 @@ I │  0  0  0  0  0  0  0  0  0  │
 ```plaintext
 Adjacency list: 
 A        C  D
-B        B
+B        D
 C        E  F
 D        E
 E        G
@@ -53,4 +53,23 @@ int[][] adjacencymatrix = {{0,0,1,1,0,0,0,0,0},
                            {0,0,0,0,0,0,0,0,1},
                            {0,0,0,0,0,0,0,0,0}
 }
+```
+
+#### Question 3
+##### Write code to create the graph using linked-list representation. You use the adjacency matrix or the adjacency list for this purpose?
+```plaintext
+String[] vertex = { "A", "B", "C", "D", "E", "F", "G", "H", "I" };
+for (String str: vertex)
+myGraph.addVertex(str);
+
+myGraph.addEdge("A", "C", 1);
+myGraph.addEdge("A", "D", 1);
+myGraph.addEdge("B", "D", 1);
+myGraph.addEdge("C", "E", 1);
+myGraph.addEdge("C", "F", 1);
+myGraph.addEdge("D", "E", 1);
+myGraph.addEdge("E", "G", 1);
+myGraph.addEdge("F", "H", 1);
+myGraph.addEdge("G", "H", 1);
+myGraph.addEdge("H", "I", 1);
 ```
