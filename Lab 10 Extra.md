@@ -28,8 +28,9 @@ public class Questionl {
     }
 
     public static void main(String[] args) {
-          int s =2, t=3;
-          System.out.println(("F("+s+", "+t+") = " + F(s,t)));
+          System.out.println(("F("+4+", "+10+") = " + F(4,10)));
+          System.out.println(("F("+12+", "+8+") = " + F(12,8)));
+          System.out.println(("F("+7+", "+12+") = " + F(7,12)));
     }
 }
 
