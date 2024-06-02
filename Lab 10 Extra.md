@@ -40,5 +40,34 @@ public class Questionl {
 <p align="center">
 <img src="RecursionQ2.png" alt="RecursionQ1" width="748" height="446">
 </p>
+```plaintext
+import java.util.Scanner;
 
+public class Question2 {
+    public static int binomial(int n, int k){
+        if (k == n || k == 0){
+            return 1;
+        }else{
+            int partl = binomial( n-1, k-1);
+            int part2 = binomial( n-1, k);
+            return partl + part2;
+        }
+    }
+
+
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter the degree of your binomial expression: ");
+    int intInput = input.nextInt();
+
+    System.out.print("(x+y)^" + intInput + "=");
+    for (int k = 0; k <= intInput; k++) {
+        System.out.print(binomial(intInput,k) + "x^"+(intInput-k)+"y^"+k);
+        if (k != intInput)
+            System.out.print(" + ");
+    }
+    System.out.println();
+}
+}
+```
 
