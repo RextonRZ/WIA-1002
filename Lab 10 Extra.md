@@ -38,7 +38,7 @@ public class Questionl {
 
 #### Question 2
 <p align="center">
-<img src="RecursionQ2.png" alt="RecursionQ1" width="748" height="446">
+<img src="RecursionQ2.png" alt="RecursionQ2" width="748" height="446">
 </p>
 
 ```plaintext
@@ -71,4 +71,10 @@ public static void main(String[] args) {
 }
 }
 ```
+
+
+#### Question 3
+<p align="center">
+<img src="RecursionQ3.png" alt="RecursionQ3" width="780" height="893">
+</p>
 
