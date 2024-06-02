@@ -172,7 +172,7 @@ Merge sort
 </p>
 
 ```plaintext
-binary search
+Binary search
 ```
 
 #### Question 5
@@ -181,5 +181,5 @@ binary search
 </p>
 
 ```plaintext
-linear search
+Linear search
 ```
