@@ -78,3 +78,20 @@ public static void main(String[] args) {
 <img src="RecursionQ3.png" alt="RecursionQ3" width="780" height="893">
 </p>
 
+##### 3a
+```plaintext
+public static int TOH(int n){
+        if(n==1) return 1;
+        else return 2*TOH(n-1)+1;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Recurrence relation: 2T(n+1)+1");
+        System.out.print("How many slabs? (what is your n) ");
+        Scanner input = new Scanner(System.in);
+        int inputtedInt = input.nextInt();
+        
+        int finalResult = TOH(inputtedInt);
+        System.out.println("Number of steps to complete the tower of Hanoi: "+finalResult);
+    }
+```
