@@ -29,7 +29,7 @@ public class Questionl {
 
     public static void main(String[] args) {
           int s =2, t=3;
-          System.out.println(("F("+s+", "+t+") = " + F(s,1)));
+          System.out.println(("F("+s+", "+t+") = " + F(s,t)));
     }
 }
 
