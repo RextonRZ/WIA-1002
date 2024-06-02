@@ -134,3 +134,28 @@ ii) Next pass:
 iii) Continue:
 - Repeat until the array is sorted.
 ```
+
+```plaintext
+d. Merge sort
+
+Initial: 90  8  7  56  125  237  9  1  653
+
+i) Split into two:
+   90  8  7  56 | 125 237 9 1 653
+ii) Split into two again:
+   90  8 | 7  56 |  124  237  | 9   1  653|
+iii) Split into two again:
+   90 | 8 | 7 | 56 |  124 | 237  | 9  | 1  653|
+
+iv) Split for the last time for the unsplitted
+   90 | 8 | 7 | 56 |  124 | 237  | 9  | 1 | 653|
+v) Merge them back with sorted order
+   90 | 8 | 7 | 56 |  124 | 237  | 9  | 1  653|
+   8  90 | 7  56 |  124  237  |  1   9  653|
+   7  8  56  90 |  1  9  124  237  653
+   1  7  8  9  56  90  124  237  653
+```
+
+
+
+
