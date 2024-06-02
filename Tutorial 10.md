@@ -50,3 +50,44 @@ public static void main(String[] args) {
     }
 ```
 
+
+## 4) Write a recursive method to calculate the following :
+
+## 5 + 4 + 3 + 2 + 1.
+## State the base case and recursive case. Trace your solution using number, N of 5.
+## Algorithm :
+## 1. Base case = 1
+## 2. Recursive case = n + sum(n-1)
+
+
+```plaintext
+public static void main(String[] args) {
+        System.out.println(recursive(5));
+    }
+    public static int recursive(int num){
+        if (num ==1) return 1;
+        else return num+recursive(num-1);
+    }
+```
+
+
+## 5) Write a recursive method printDigit that prints an integer argument as its constituent digits,
+## with a blank space separates each digit with the next. For example, if the argument is 4567,
+## this method will print 4 5 6 7 on the screen. 
+
+
+```plaintext
+public static void main(String[] args) {
+        printDigit(4567);
+        System.out.println("");
+    }
+    public static void printDigit(int n){
+        
+        if (n>10) {
+            printDigit(n/10);
+            System.out.print(" ");
+            System.out.print(n%10);
+        }
+        else System.out.print(n%10);
+    }
+```
