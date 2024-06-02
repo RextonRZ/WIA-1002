@@ -34,7 +34,7 @@ ii) Searching for 54:
 
 #### Question 2:
 #### Describe the technique for each sort algorithm below. Given the following list:
-##### 90 8 7 56 125 237 9 1 653
+##### 90  8  7  56  125  237  9  1  653
 
 ```plaintext
 Show a trace of execution for:
@@ -44,5 +44,93 @@ c. Bubble sort
 d. Merge sort
 ```
 
+```plaintext
+Answer:
+a. Selection sort:
+90  8  7  56  125  237  9  1  653
+i)  Identify the minimum =1
+ii) Then lock the swap value:  `1`  8  7  56  125  237  9  90  653
+iii) Next, starting the second index
+iv) Find the next minimum and swap with the element at the 2nd index
+v) Lock the swap value :  `1`  `7`  8  56  125  237  9  90  653
+vi) Repeat the steps above until all the elements are correctly sorted.
+
+Sorted:  1  7  8  9  56  90  124  237  653
+
+```
 
 
+```plaintext
+Answer
+b. Insertion sort
+
+Initial: 90  8  7  56  125  237  9  1  653
+
+i) Assume the first value, is sorted
+ii) Go to second element, compare with the sorted list (sorted list:90)
+8  90  7  56  125  237  9  1  653
+iii) Go to third element, compare with the sorted list(sorted list:8  90)
+7  8  90  56  125  237  9  1  653
+iv) Repeat the steps above until all the elements are correctly sorted.
+
+Sorted:  1  7  8  9  56  90  124  237  653
+```
+
+
+
+```plaintext
+c. Bubble sort
+
+Initial: 90  8  7  56  125  237  9  1  653
+
+1st pass:
+8  90  7  56  125  237  9  1  653
+8  7  90  56  125  237  9  1  653
+8  7  56  90  125  237  9  1  653
+8  7  56  90  125  9  237  1  653
+8  7  56  90  125  9  1  237  653
+
+
+2nd pass:
+7  8  56  90  125  9  1  237  653
+7  8  56  90  9  125  1  237  653
+7  8  56  90  9  1  125  237  653
+
+
+3rd pass:
+7  8  56  9  90  1  125  237  653
+7  8  56  9  1  90  125  237  653
+
+
+4th pass:
+7  8  56  9  1  90  125  237  653
+7  8  9  56  1  90  125  237  653
+7  8  9  1  56  90  125  237  653
+
+5th pass:
+7  8  9  1  56  90  125  237  653
+7  8  1  9  56  90  125  237  653
+
+6th pass:
+7  8  1  9  56  90  125  237  653
+7  1  8  9  56  90  125  237  653
+
+7th pass:
+7  1  8  9  56  90  125  237  653
+1  7  8  9  56  90  125  237  653
+
+
+Explanation:
+
+i) First pass:
+- Compare adjacent elements.
+- Swap if the first is greater than the second.
+- Repeat until the end of the array.
+
+ii) Next pass:
+- Repeat the comparison and swapping from the beginning.
+- Exclude the last sorted elements.
+
+iii) Continue:
+- Repeat until the array is sorted.
+```
