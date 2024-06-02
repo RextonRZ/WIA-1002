@@ -78,7 +78,7 @@ public static void main(String[] args) {
 <img src="RecursionQ3.png" alt="RecursionQ3" width="780" height="893">
 </p>
 
-##### 3a
+
 ```plaintext
 public static int TOH(int n){
         if(n==1) return 1;
