@@ -1,7 +1,7 @@
 ## WIA1002/WIB1002 Data Structure
 ### Tutorial 10:  Recursion
 
-## 1) Explain the problem that occurs when executing the recursive method f(0).
+#### 1) Explain the problem that occurs when executing the recursive method f(0).
 ```plaintext
 public static int f(int n) {
   if (n == 1)
@@ -17,7 +17,7 @@ This method has a base case that stops recursion only when n equals 1. However, 
 ```
 
 
-## 2) Explain the problem that occurs when executing the recursive method f().
+#### 2) Explain the problem that occurs when executing the recursive method f().
 ```plaintext
 public static int f(int n) {
   if (n == 0)
@@ -32,8 +32,8 @@ The method has a base case that stops recursion only when n equals 0. However, f
 
 ```
 
-## 3) Write a recursive method to reverse a string.
-## String → gnirts
+#### 3) Write a recursive method to reverse a string.
+#### String → gnirts
 
 ```plaintext
 public static void main(String[] args) {
@@ -51,7 +51,7 @@ public static void main(String[] args) {
 ```
 
 
-## 4) Write a recursive method to calculate the following :
+#### 4) Write a recursive method to calculate the following :
 
 ```plaintext
 5 + 4 + 3 + 2 + 1.
@@ -72,7 +72,7 @@ public static void main(String[] args) {
 ```
 
 
-## 5) Write a recursive method printDigit that prints an integer argument as its constituent digits, with a blank space separates each digit with the next. For example, if the argument is 4567, this method will print 4 5 6 7 on the screen. 
+#### 5) Write a recursive method printDigit that prints an integer argument as its constituent digits, with a blank space separates each digit with the next. For example, if the argument is 4567, this method will print 4 5 6 7 on the screen. 
 
 
 ```plaintext
