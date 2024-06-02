@@ -157,5 +157,29 @@ v) Merge them back with sorted order
 ```
 
 
+#### Question 3
+<p align="center">
+<img src="searchSortQ4.png" alt="Merge Sort.png" width="770" height="452">
+</p>
 
+```plaintext
+Merge sort
+```
 
+#### Question 4
+<p align="center">
+<img src="searchQ4.png" alt="searchQ4.png" width="693" height="371">
+</p>
+
+```plaintext
+binary search
+```
+
+#### Question 5
+<p align="center">
+<img src="linearsearchQ5.png" alt="linearsearchQ5.png" width="769" height="386">
+</p>
+
+```plaintext
+linear search
+```
