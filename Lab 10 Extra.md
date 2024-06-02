@@ -35,3 +35,10 @@ public class Questionl {
 }
 
 ```
+
+#### Question 2
+<p align="center">
+<img src="RecursionQ2.png" alt="RecursionQ1" width="748" height="446">
+</p>
+
+
