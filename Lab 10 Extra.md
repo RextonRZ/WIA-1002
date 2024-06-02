@@ -40,6 +40,7 @@ public class Questionl {
 <p align="center">
 <img src="RecursionQ2.png" alt="RecursionQ1" width="748" height="446">
 </p>
+
 ```plaintext
 import java.util.Scanner;
 
